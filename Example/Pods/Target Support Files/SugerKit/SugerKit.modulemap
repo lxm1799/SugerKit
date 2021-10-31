@@ -1,0 +1,6 @@
+framework module SugerKit {
+  umbrella header "SugerKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

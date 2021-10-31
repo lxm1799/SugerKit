@@ -9,28 +9,39 @@
 Pod::Spec.new do |s|
   s.name             = 'SugerKit'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SugerKit.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.summary          = '个人开发的快捷操作方法'
 
   s.homepage         = 'https://github.com/luckyBoy/SugerKit'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'luckyBoy' => 'goodlucky1130@163.com' }
   s.source           = { :git => 'https://github.com/luckyBoy/SugerKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
   s.ios.deployment_target = '9.0'
-
+  s.swift_version = '5.0'
   s.source_files = 'SugerKit/Classes/**/*'
+  
+  # ---------------  Cocoa常用扩展  -----------
+  s.subspec 'Cocoa' do |ss|
+      # Foundation
+      ss.subspec 'Foundation' do |sss|
+          sss.source_files = 'SugerKit/Classes/Cocoa/Foundation/*.swift'
+      end
+      
+      # UIKit
+      ss.subspec 'UIKit' do |sss|
+          sss.source_files = 'SugerKit/Classes/Cocoa/UIKit/*.swift'
+      end
+  end
+  
+  
+  # ---------------  工具库  -----------
+  s.subspec 'Tool' do |ss|
+      ss.source_files = 'SugerKit/Classes/Tool/*.swift'
+      ss.frameworks = 'UIKit', 'Foundation'
+      ss.dependency 'SugerKit/Cocoa'
+  end
+  
+  
   
   # s.resource_bundles = {
   #   'SugerKit' => ['SugerKit/Assets/*.png']

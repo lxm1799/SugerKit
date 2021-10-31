@@ -1,0 +1,25 @@
+PODS:
+  - SugerKit (0.1.0):
+    - SugerKit/Cocoa (= 0.1.0)
+    - SugerKit/Tool (= 0.1.0)
+  - SugerKit/Cocoa (0.1.0):
+    - SugerKit/Cocoa/Foundation (= 0.1.0)
+    - SugerKit/Cocoa/UIKit (= 0.1.0)
+  - SugerKit/Cocoa/Foundation (0.1.0)
+  - SugerKit/Cocoa/UIKit (0.1.0)
+  - SugerKit/Tool (0.1.0):
+    - SugerKit/Cocoa
+
+DEPENDENCIES:
+  - SugerKit (from `../`)
+
+EXTERNAL SOURCES:
+  SugerKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SugerKit: b12545dc07574f7b40518e71fd5a124f9747e512
+
+PODFILE CHECKSUM: 48a1e5a81711c60b1f27d22c4ffb4c8788937a1f
+
+COCOAPODS: 1.11.0
