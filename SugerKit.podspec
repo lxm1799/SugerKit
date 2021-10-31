@@ -18,7 +18,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/lxm1799/SugerKit.git', :tag => s.version.to_s }
   s.ios.deployment_target = '10.0'
   s.swift_version = '5.0'
-  s.default_subspecs = 'Cocoa','Tool'
+  s.source_files = 'SugerKit/Classes/Cocoa/**/*.swift','SugerKit/Classes/Tool/*.swift'
+  #s.default_subspecs = 'Cocoa','Tool'
   
   # ---------------  Cocoa常用扩展  -----------
   s.subspec 'Cocoa' do |ss|
