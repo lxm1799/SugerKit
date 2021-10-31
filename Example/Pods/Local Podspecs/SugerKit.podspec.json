@@ -2,26 +2,30 @@
   "name": "SugerKit",
   "version": "0.1.0",
   "summary": "个人开发的快捷操作方法",
-  "homepage": "https://github.com/luckyBoy/SugerKit",
+  "homepage": "https://github.com/lxm1799/SugerKit",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "luckyBoy": "goodlucky1130@163.com"
+    "lxm1799": "goodlucky1130@163.com"
   },
   "source": {
-    "git": "https://github.com/luckyBoy/SugerKit.git",
+    "git": "https://github.com/lxm1799/SugerKit.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "10.0"
   },
   "swift_versions": "5.0",
-  "source_files": "SugerKit/Classes/**/*",
+  "source_files": "SugerKit/Classes/*.swift",
   "subspecs": [
     {
       "name": "Cocoa",
+      "frameworks": [
+        "UIKit",
+        "Foundation"
+      ],
       "subspecs": [
         {
           "name": "Foundation",
@@ -39,12 +43,7 @@
       "frameworks": [
         "UIKit",
         "Foundation"
-      ],
-      "dependencies": {
-        "SugerKit/Cocoa": [
-
-        ]
-      }
+      ]
     }
   ],
   "swift_version": "5.0"
