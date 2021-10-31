@@ -36,12 +36,12 @@ class ViewController: UIViewController {
     
     lazy var testLab: UILabel = {
         let view = UILabel.init()
-            .set(frame: .init(x: 100, y: testView.maxY + 10, width: 100, height: 20))
-            .set(backgroundColor: .red)
-            .set(clipsToBounds: true)
-            .set(layerCornerRadius: 50)
+            .set(frame: .init(x: 100, y: testView.maxY + 10, width: 100, height: 30))
+            .set(backgroundColor: .orange)
             .set(textColor: .black)
-            .set(font: .bold(15))
+            .set(font: .medium(21))
+            .set(text: "测试yyyy")
+            .set(textAlignment: .center)
         return view
     }()
 }
