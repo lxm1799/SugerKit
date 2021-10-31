@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'luckyBoy' => 'goodlucky1130@163.com' }
   s.source           = { :git => 'https://github.com/luckyBoy/SugerKit.git', :tag => s.version.to_s }
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
   s.swift_version = '5.0'
   s.source_files = 'SugerKit/Classes/**/*'
   
