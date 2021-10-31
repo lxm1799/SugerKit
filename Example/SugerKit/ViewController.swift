@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         view.addSubview(testView)
+        view.addSubview(testLab)
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,6 +31,17 @@ class ViewController: UIViewController {
             .set(backgroundColor: .red)
             .set(clipsToBounds: true)
             .set(layerCornerRadius: 50)
+        return view
+    }()
+    
+    lazy var testLab: UILabel = {
+        let view = UILabel.init()
+            .set(frame: .init(x: 100, y: testView.maxY + 10, width: 100, height: 20))
+            .set(backgroundColor: .red)
+            .set(clipsToBounds: true)
+            .set(layerCornerRadius: 50)
+            .set(textColor: .black)
+            .set(font: .bold(15))
         return view
     }()
 }

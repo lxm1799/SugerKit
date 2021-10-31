@@ -19,23 +19,23 @@ extension UIFont{
     }
 
     
-    static func regular(_ size: CGFloat) -> UIFont {
+    static public func regular(_ size: CGFloat) -> UIFont {
         return UIFont(name: PingFangFontName.Regular.rawValue, size: size)!
     }
     
-    static func light(_ size: CGFloat) -> UIFont {
+    static public func light(_ size: CGFloat) -> UIFont {
         return UIFont(name: PingFangFontName.Light.rawValue, size: size)!
     }
     
-    static func medium(_ size: CGFloat) -> UIFont {
+    static public func medium(_ size: CGFloat) -> UIFont {
         return UIFont(name: PingFangFontName.Medium.rawValue, size: size)!
     }
     
-    static func semiBold(_ size: CGFloat) -> UIFont {
+    static public func semiBold(_ size: CGFloat) -> UIFont {
         return UIFont(name: PingFangFontName.Semibold.rawValue, size: size)!
     }
     
-    static func bold(_ size: CGFloat) -> UIFont {
+    static public func bold(_ size: CGFloat) -> UIFont {
         return UIFont(name: PingFangFontName.Bold.rawValue, size: size)!
     }
 }
