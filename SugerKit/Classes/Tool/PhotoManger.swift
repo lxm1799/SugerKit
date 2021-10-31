@@ -52,24 +52,24 @@ public class PhotoManger: NSObject, UIImagePickerControllerDelegate, UINavigatio
         vc.present(picker, animated: true, completion: nil)
     }
     
-    // 拍照或选择照片 UIImagePickerControllerDelegate
-    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        guard let vc = CurrentManager.getTopController() else {
-            return
-        }
-        guard let image: UIImage = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage else {
-            return
-        }
-        let finalData = self.resetSizeOfImageData(image: image)
-        // 拍照后保存
-        if picker.sourceType == .camera && self.savePhoto {
-            UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(image:didFinishSavingWithError:contextInfo:)), nil)
-        }
-        
-        self.finishBlock?(image, finalData)
-        self.delegate?.didFinish(image: image, imgData: finalData)
-        vc.dismiss(animated: true, completion: nil)
-    }
+//    // 拍照或选择照片 UIImagePickerControllerDelegate
+//    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+//        guard let vc = CurrentManager.getTopController() else {
+//            return
+//        }
+//        guard let image: UIImage = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage else {
+//            return
+//        }
+//        let finalData = self.resetSizeOfImageData(image: image)
+//        // 拍照后保存
+//        if picker.sourceType == .camera && self.savePhoto {
+//            UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(image:didFinishSavingWithError:contextInfo:)), nil)
+//        }
+//
+//        self.finishBlock?(image, finalData)
+//        self.delegate?.didFinish(image: image, imgData: finalData)
+//        vc.dismiss(animated: true, completion: nil)
+//    }
     
     // 取消
     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
