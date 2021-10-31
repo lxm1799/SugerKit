@@ -5,7 +5,8 @@ use_frameworks!
 
 target 'SugerKit_Example' do
   pod 'SugerKit', :path => '../'
-
+  #pod 'SugerKit'
+  
   target 'SugerKit_Tests' do
     inherit! :search_paths
 
