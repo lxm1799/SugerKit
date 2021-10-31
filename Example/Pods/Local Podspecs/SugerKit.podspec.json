@@ -18,9 +18,9 @@
     "ios": "10.0"
   },
   "swift_versions": "5.0",
-  "default_subspecs": [
-    "Cocoa",
-    "Tool"
+  "source_files": [
+    "SugerKit/Classes/Cocoa/**/*.swift",
+    "SugerKit/Classes/Tool/*.swift"
   ],
   "subspecs": [
     {

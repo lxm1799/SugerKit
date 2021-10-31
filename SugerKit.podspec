@@ -18,23 +18,21 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/lxm1799/SugerKit.git', :tag => s.version.to_s }
   s.ios.deployment_target = '10.0'
   s.swift_version = '5.0'
-  s.source_files = 'SugerKit/Classes/Cocoa/**/*.swift','SugerKit/Classes/Tool/*.swift'
+  #s.source_files = 'SugerKit/Classes/Cocoa/**/*.swift','SugerKit/Classes/Tool/*.swift'
   #s.default_subspecs = 'Cocoa','Tool'
   
   # ---------------  Cocoa常用扩展  -----------
-  s.subspec 'Cocoa' do |ss|
-      ss.source_files = 'SugerKit/Classes/Cocoa/**/*.swift'
-      # Foundation
-      ss.subspec 'Foundation' do |sss|
-          sss.source_files = 'SugerKit/Classes/Cocoa/Foundation/*.swift'
-          sss.frameworks = 'UIKit', 'Foundation'
-      end
-      
-      # UIKit
-      ss.subspec 'UIKit' do |sss|
-          sss.source_files = 'SugerKit/Classes/Cocoa/UIKit/*.swift'
-          sss.frameworks = 'UIKit', 'Foundation'
-      end
+  
+  # Foundation
+  s.subspec 'Foundation' do |ss|
+      ss.source_files = 'SugerKit/Classes/Foundation/*.swift'
+      ss.frameworks = 'UIKit', 'Foundation'
+  end
+  
+  # UIKit
+  s.subspec 'UIKit' do |ss|
+      ss.source_files = 'SugerKit/Classes/UIKit/*.swift'
+      ss.frameworks = 'UIKit', 'Foundation'
   end
   
   
