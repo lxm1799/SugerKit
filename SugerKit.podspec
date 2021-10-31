@@ -14,22 +14,24 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/lxm1799/SugerKit'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'luckyBoy' => 'goodlucky1130@163.com' }
+  s.author           = { 'lxm1799' => 'goodlucky1130@163.com' }
   s.source           = { :git => 'https://github.com/lxm1799/SugerKit.git', :tag => s.version.to_s }
   s.ios.deployment_target = '10.0'
   s.swift_version = '5.0'
-  s.source_files = 'SugerKit/Classes/**/*'
+  
   
   # ---------------  Cocoa常用扩展  -----------
   s.subspec 'Cocoa' do |ss|
       # Foundation
       ss.subspec 'Foundation' do |sss|
           sss.source_files = 'SugerKit/Classes/Cocoa/Foundation/*.swift'
+          ss.frameworks = 'UIKit', 'Foundation'
       end
       
       # UIKit
       ss.subspec 'UIKit' do |sss|
           sss.source_files = 'SugerKit/Classes/Cocoa/UIKit/*.swift'
+          ss.frameworks = 'UIKit', 'Foundation'
       end
   end
   
@@ -38,7 +40,6 @@ Pod::Spec.new do |s|
   s.subspec 'Tool' do |ss|
       ss.source_files = 'SugerKit/Classes/Tool/*.swift'
       ss.frameworks = 'UIKit', 'Foundation'
-      ss.dependency 'SugerKit/Cocoa'
   end
   
   

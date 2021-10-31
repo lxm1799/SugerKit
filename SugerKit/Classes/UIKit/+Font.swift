@@ -20,7 +20,7 @@ extension UIFont{
 
     
     static func regular(_ size: CGFloat) -> UIFont {
-        return UIFont.systemFont(ofSize: size)
+        return UIFont(name: PingFangFontName.Regular.rawValue, size: size)!
     }
     
     static func light(_ size: CGFloat) -> UIFont {
@@ -36,7 +36,7 @@ extension UIFont{
     }
     
     static func bold(_ size: CGFloat) -> UIFont {
-        return UIFont.boldSystemFont(ofSize: size)
+        return UIFont(name: PingFangFontName.Bold.rawValue, size: size)!
     }
 }
 
