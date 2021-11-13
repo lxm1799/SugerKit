@@ -47,6 +47,11 @@ public extension UIColor {
                        b: CGFloat(arc4random_uniform(256)))
     }
     
+    
+    /// 设置rgb相同颜色
+    class func sameColor(rgb:CGFloat,alpha: CGFloat = 1.0) -> UIColor {
+        return UIColor.init(r: rgb, g: rgb, b: rgb,alpha: alpha)
+    }
 }
 
 
