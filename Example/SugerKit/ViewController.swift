@@ -13,18 +13,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+
         view.addSubview(testView)
         view.addSubview(testLab)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    
     lazy var testView: UIView = {
         let view = UIView.init()
             .set(frame: .init(x: 100, y: 100, width: 100, height: 100))
@@ -40,7 +33,7 @@ class ViewController: UIViewController {
             .set(backgroundColor: .orange)
             .set(textColor: .black)
             .set(font: .medium(21))
-            .set(text: "测试yyyy")
+            .set(text: "测试文本")
             .set(textAlignment: .center)
         return view
     }()
