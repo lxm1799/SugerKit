@@ -18,31 +18,21 @@
     "ios": "10.0"
   },
   "swift_versions": "5.0",
-  "source_files": [
-    "SugerKit/Classes/Cocoa/**/*.swift",
-    "SugerKit/Classes/Tool/*.swift"
-  ],
   "subspecs": [
     {
-      "name": "Cocoa",
-      "source_files": "SugerKit/Classes/Cocoa/**/*.swift",
-      "subspecs": [
-        {
-          "name": "Foundation",
-          "source_files": "SugerKit/Classes/Cocoa/Foundation/*.swift",
-          "frameworks": [
-            "UIKit",
-            "Foundation"
-          ]
-        },
-        {
-          "name": "UIKit",
-          "source_files": "SugerKit/Classes/Cocoa/UIKit/*.swift",
-          "frameworks": [
-            "UIKit",
-            "Foundation"
-          ]
-        }
+      "name": "Foundation",
+      "source_files": "SugerKit/Classes/Foundation/*.swift",
+      "frameworks": [
+        "UIKit",
+        "Foundation"
+      ]
+    },
+    {
+      "name": "UIKit",
+      "source_files": "SugerKit/Classes/UIKit/*.swift",
+      "frameworks": [
+        "UIKit",
+        "Foundation"
       ]
     },
     {
